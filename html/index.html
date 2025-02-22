@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="button">
+        <button onclick="changeColor()">Switch Theme</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            console.log(document.body.style.backgroundColor);
+            document.body.style.backgroundColor = document.body.style.backgroundColor === "yellow" ? "green" : "yellow";
+        }
+    </script>
+    
+</body>
+</html>
