@@ -4,15 +4,18 @@ const user = {
     password :"123"
 };
 
-const proxyUser = new Proxy(user,{
-    get(target,prop){
-        console.log(prop);
-        if(prop==="password"){
-            throw new Error("Access Denied");
-        }
-        return target[prop];
-    }
-    
-});
+// const proxyUser = new Proxy(user,{
+//     get(target,prop){
+//         console.log(prop);
+//         if(prop==="password"){
+//             throw new Error("Access Denied");
+//         }
+//         return target[prop];
+//     }
+//     set(target,prop,value){
+//         //yet to complete
+//         return true;
+//     }
+// });
 
-console.log(proxyUser.password);
+// console.log(proxyUser.password);
