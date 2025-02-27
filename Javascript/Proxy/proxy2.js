@@ -32,4 +32,3 @@ proxyArr[-2]=44;
 console.log(arr);
 console.log(proxyArr);
 
-console.log(arr[-3]);
