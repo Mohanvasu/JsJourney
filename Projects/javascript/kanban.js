@@ -5,7 +5,7 @@ const boards = document.querySelectorAll(".board");
 let modal = document.getElementById("taskModal");
 const close = document.querySelector(".close");
 const cancel = document.querySelector("#cancelTask");
-const saveTask = document.querySelector("#saveTask");
+let saveTask = document.querySelector("#saveTask");
 
 window.addEventListener("load", () => {
     const formData = JSON.parse(localStorage.getItem('formEntries') || []);
@@ -26,12 +26,16 @@ saveTask.addEventListener("click", () => {
     const taskPriority = document.querySelector("#taskPriority").value;
     const taskDescription = document.querySelector("#taskDescription").value;
 
+    if(taskName.value ==null || taskName.value === "" || (typeof taskName.value === "string")){
+        saveTask.setAttribute("disabled",true);
+    }
+
     const formData = {
         task : taskName,
         priority : taskPriority,
         description : taskDescription
     }
-    
+
     let savedData = JSON.parse(localStorage.getItem('formEntries') || []);
     savedData.push(formData);
     localStorage.setItem('formEntries',JSON.stringify(savedData));
