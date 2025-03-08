@@ -36,6 +36,8 @@ body{
     border-radius: 8px;
     cursor: pointer;
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
 .item:hover{
     background-color: white;
@@ -144,4 +146,9 @@ textarea {
 .btn-secondary {
     background-color: #ccc;
     color: black;
+}
+.delete-btn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
